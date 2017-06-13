@@ -1,0 +1,5 @@
+C:\Users\dgalvan\Desktop\CharlyEjemplo\CharlyEjemplo.Web.Model\bin\Debug\CharlyEjemplo.Web.Model.dll
+C:\Users\dgalvan\Desktop\CharlyEjemplo\CharlyEjemplo.Web.Model\bin\Debug\CharlyEjemplo.Web.Model.pdb
+C:\Users\dgalvan\Desktop\CharlyEjemplo\CharlyEjemplo.Web.Model\obj\Debug\CharlyEjemplo.Web.Model.csprojResolveAssemblyReference.cache
+C:\Users\dgalvan\Desktop\CharlyEjemplo\CharlyEjemplo.Web.Model\obj\Debug\CharlyEjemplo.Web.Model.dll
+C:\Users\dgalvan\Desktop\CharlyEjemplo\CharlyEjemplo.Web.Model\obj\Debug\CharlyEjemplo.Web.Model.pdb

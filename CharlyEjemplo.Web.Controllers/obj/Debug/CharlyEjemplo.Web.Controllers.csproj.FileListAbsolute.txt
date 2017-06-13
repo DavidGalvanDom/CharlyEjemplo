@@ -1,0 +1,11 @@
+C:\Users\dgalvan\Desktop\CharlyEjemplo\CharlyEjemplo.Web.Controllers\bin\Debug\CharlyEjemplo.Web.Controllers.dll
+C:\Users\dgalvan\Desktop\CharlyEjemplo\CharlyEjemplo.Web.Controllers\bin\Debug\CharlyEjemplo.Web.Controllers.pdb
+C:\Users\dgalvan\Desktop\CharlyEjemplo\CharlyEjemplo.Web.Controllers\bin\Debug\System.Web.Mvc.dll
+C:\Users\dgalvan\Desktop\CharlyEjemplo\CharlyEjemplo.Web.Controllers\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\dgalvan\Desktop\CharlyEjemplo\CharlyEjemplo.Web.Controllers\bin\Debug\System.Web.Mvc.xml
+C:\Users\dgalvan\Desktop\CharlyEjemplo\CharlyEjemplo.Web.Controllers\bin\Debug\Microsoft.Web.Infrastructure.xml
+C:\Users\dgalvan\Desktop\CharlyEjemplo\CharlyEjemplo.Web.Controllers\obj\Debug\CharlyEjemplo.Web.Controllers.csprojResolveAssemblyReference.cache
+C:\Users\dgalvan\Desktop\CharlyEjemplo\CharlyEjemplo.Web.Controllers\obj\Debug\CharlyEjemplo.Web.Controllers.dll
+C:\Users\dgalvan\Desktop\CharlyEjemplo\CharlyEjemplo.Web.Controllers\obj\Debug\CharlyEjemplo.Web.Controllers.pdb
+C:\Users\dgalvan\Desktop\CharlyEjemplo\CharlyEjemplo.Web.Controllers\bin\Debug\CharlyEjemplo.Web.Model.dll
+C:\Users\dgalvan\Desktop\CharlyEjemplo\CharlyEjemplo.Web.Controllers\bin\Debug\CharlyEjemplo.Web.Model.pdb
