@@ -11,13 +11,19 @@ namespace CharlyEjemplo.Web.Model
 {
     public class Usuario
     {
-        [Required]
+        
         public int id { get; set; }
 
+        [Required]
         [MaxLength(50)]
         public string Nombre { get; set; }
 
+        [Required]
         [MaxLength(200)]
         public string Direccion { get; set; }
+
+        [Required]
+        public string usuarioCreacion { get; set; }
+
     }
 }

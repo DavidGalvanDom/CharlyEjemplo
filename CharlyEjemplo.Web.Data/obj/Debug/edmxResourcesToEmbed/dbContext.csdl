@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CharlyNewModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="idRol" />
+    </Key>
+    <Property Name="idRol" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
+    <Property Name="idEstatus" Type="Int32" />
+    <Property Name="nombreRol" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Usuarios" Relationship="Self.FK_Usuarios_idRol" FromRole="Roles" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fechaCreacion" Type="DateTime" Precision="3" />
+    <Property Name="idEstatus" Type="Int32" />
+    <Property Name="loginUsuario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="passwordUsuario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="nombresUsuario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="apellidosUsuario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="emailUsuario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="telefonoUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="celularUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="departamentoUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="lenguajeUsuario" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="idRol" Type="Int32" />
+    <NavigationProperty Name="Roles" Relationship="Self.FK_Usuarios_idRol" FromRole="Usuarios" ToRole="Roles" />
+  </EntityType>
+  <Association Name="FK_Usuarios_idRol">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="idRol" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="idRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbCharlyNew" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Roles" EntityType="Self.Roles" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+    <AssociationSet Name="FK_Usuarios_idRol" Association="Self.FK_Usuarios_idRol">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

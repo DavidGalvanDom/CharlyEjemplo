@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CharlyNewModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="idRol" />
+    </Key>
+    <Property Name="idRol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fechaCreacion" Type="datetime" />
+    <Property Name="idEstatus" Type="int" />
+    <Property Name="nombreRol" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fechaCreacion" Type="datetime" />
+    <Property Name="idEstatus" Type="int" />
+    <Property Name="loginUsuario" Type="varchar" MaxLength="100" />
+    <Property Name="passwordUsuario" Type="varchar" MaxLength="100" />
+    <Property Name="nombresUsuario" Type="varchar" MaxLength="100" />
+    <Property Name="apellidosUsuario" Type="varchar" MaxLength="100" />
+    <Property Name="emailUsuario" Type="varchar" MaxLength="100" />
+    <Property Name="telefonoUsuario" Type="varchar" MaxLength="20" />
+    <Property Name="celularUsuario" Type="varchar" MaxLength="20" />
+    <Property Name="departamentoUsuario" Type="varchar" MaxLength="50" />
+    <Property Name="lenguajeUsuario" Type="varchar" MaxLength="5" />
+    <Property Name="idRol" Type="int" />
+  </EntityType>
+  <Association Name="FK_Usuarios_idRol">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="idRol" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="idRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CharlyNewModelStoreContainer">
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Usuarios_idRol" Association="Self.FK_Usuarios_idRol">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,10 @@
+C:\Users\dgalvan\Desktop\Charly\CharlyEjemplo\CharlyEjemplo\CharlyEjemplo.Web.Data\bin\Debug\CharlyEjemplo.Web.Data.dll.config
+C:\Users\dgalvan\Desktop\Charly\CharlyEjemplo\CharlyEjemplo\CharlyEjemplo.Web.Data\bin\Debug\CharlyEjemplo.Web.Data.dll
+C:\Users\dgalvan\Desktop\Charly\CharlyEjemplo\CharlyEjemplo\CharlyEjemplo.Web.Data\bin\Debug\CharlyEjemplo.Web.Data.pdb
+C:\Users\dgalvan\Desktop\Charly\CharlyEjemplo\CharlyEjemplo\CharlyEjemplo.Web.Data\bin\Debug\EntityFramework.dll
+C:\Users\dgalvan\Desktop\Charly\CharlyEjemplo\CharlyEjemplo\CharlyEjemplo.Web.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dgalvan\Desktop\Charly\CharlyEjemplo\CharlyEjemplo\CharlyEjemplo.Web.Data\bin\Debug\EntityFramework.xml
+C:\Users\dgalvan\Desktop\Charly\CharlyEjemplo\CharlyEjemplo\CharlyEjemplo.Web.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\dgalvan\Desktop\Charly\CharlyEjemplo\CharlyEjemplo\CharlyEjemplo.Web.Data\obj\Debug\CharlyEjemplo.Web.Data.csprojResolveAssemblyReference.cache
+C:\Users\dgalvan\Desktop\Charly\CharlyEjemplo\CharlyEjemplo\CharlyEjemplo.Web.Data\obj\Debug\CharlyEjemplo.Web.Data.dll
+C:\Users\dgalvan\Desktop\Charly\CharlyEjemplo\CharlyEjemplo\CharlyEjemplo.Web.Data\obj\Debug\CharlyEjemplo.Web.Data.pdb

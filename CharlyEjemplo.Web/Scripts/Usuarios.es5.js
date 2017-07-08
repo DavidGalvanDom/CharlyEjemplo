@@ -7,13 +7,77 @@ var Usuarios = {
     gridUsuarios: null,
 
     inicia: function inicia() {
+        this.eventos();
         this.CargarGrid();
     },
     eventos: function eventos() {
-        $('#nuevo').click(Usuario.onNuevo);
+
+        $('#UsuarioNuevo').click(Usuarios.onNuevo);
+        $(document).on('click', '#btn-GuardaNuevoUsuario', Usuarios.GuardarUsuario);
+
+        $(document).on('click', '.accrowBorrar', function () {
+            Usuarios.Borrar($(this).parent().parent().attr("data-modelId"));
+        });
+    },
+    Borrar: function Borrar(id) {
+        var url = contextPath + 'Usuario/Borrar';
+
+        $.post(url, { idUsuario: id }, function (resultado) {
+
+            if (resultado.status === true) {
+
+                Usuarios.colUsuairo.remove(id);
+                alert(resultado.mensaje);
+            } else {
+                console.log('Error ' + resultado.mensaje);
+            }
+        });
+    },
+    RedefinirValidaciones: function RedefinirValidaciones() {
+        $('form').removeData("validator");
+        $('form').removeData("unobtrusiveValidation");
+        $.validator.unobtrusive.parse("form");
+    },
+    GuardarUsuario: function GuardarUsuario() {
+        var url = contextPath + 'Usuario/Nuevo';
+        $('#usuarioCreacion').val("1");
+        dataForm = $('#NuevoUsuarioForm *').serialize();
+
+        if ($('form').valid()) {
+
+            $.post(url, dataForm, function (resultado) {
+                if (resultado.status === true) {
+
+                    Usuarios.colUsuairo.add(Usuarios.serializaUsuario(resultado.id, '#NuevoUsuarioForm'));
+
+                    $('#winUsuarioNuevo').modal('hide');
+                } else {
+                    console.log('Error ' + resultado.mensaje);
+                }
+            });
+        }
     },
     onNuevo: function onNuevo() {
-        alert('Nuevo');
+        var url = contextPath + 'Usuario/Nuevo';
+
+        $.get(url, null, function (result) {
+
+            $('#winUsuarioNuevo').html(result);
+
+            $('#winUsuarioNuevo').modal({
+                backdrop: 'static',
+                keyboard: true
+            }, 'show');
+
+            Usuarios.RedefinirValidaciones();
+        });
+    },
+    serializaUsuario: function serializaUsuario(id) {
+        return {
+            id: id,
+            Nombre: $('#Nombre').val(),
+            Direccion: $('#Direccion').val()
+        };
     },
     CargarGrid: function CargarGrid() {
         var url = contextPath + 'Usuario/CargarUsuarios';

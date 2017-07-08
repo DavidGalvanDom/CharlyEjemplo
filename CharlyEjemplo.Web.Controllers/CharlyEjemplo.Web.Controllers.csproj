@@ -30,6 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -49,6 +56,10 @@
     <Compile Include="UsuarioController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CharlyEjemplo.Web.Data\CharlyEjemplo.Web.Data.csproj">
+      <Project>{bb8905c0-eb72-4062-8222-b8402a2776ca}</Project>
+      <Name>CharlyEjemplo.Web.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CharlyEjemplo.Web.Model\CharlyEjemplo.Web.Model.csproj">
       <Project>{28340bba-e75a-45b1-b7e9-5572d00d6b73}</Project>
       <Name>CharlyEjemplo.Web.Model</Name>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CharlyNewModelStoreContainer" CdmEntityContainer="dbCharlyNew">
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="CharlyNewModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="idRol" ColumnName="idRol" />
+          <ScalarProperty Name="fechaCreacion" ColumnName="fechaCreacion" />
+          <ScalarProperty Name="idEstatus" ColumnName="idEstatus" />
+          <ScalarProperty Name="nombreRol" ColumnName="nombreRol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="CharlyNewModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="fechaCreacion" ColumnName="fechaCreacion" />
+          <ScalarProperty Name="idEstatus" ColumnName="idEstatus" />
+          <ScalarProperty Name="loginUsuario" ColumnName="loginUsuario" />
+          <ScalarProperty Name="passwordUsuario" ColumnName="passwordUsuario" />
+          <ScalarProperty Name="nombresUsuario" ColumnName="nombresUsuario" />
+          <ScalarProperty Name="apellidosUsuario" ColumnName="apellidosUsuario" />
+          <ScalarProperty Name="emailUsuario" ColumnName="emailUsuario" />
+          <ScalarProperty Name="telefonoUsuario" ColumnName="telefonoUsuario" />
+          <ScalarProperty Name="celularUsuario" ColumnName="celularUsuario" />
+          <ScalarProperty Name="departamentoUsuario" ColumnName="departamentoUsuario" />
+          <ScalarProperty Name="lenguajeUsuario" ColumnName="lenguajeUsuario" />
+          <ScalarProperty Name="idRol" ColumnName="idRol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
